@@ -183,16 +183,19 @@ body {
 .current {
   color: var(--background-focus-color);
 }
-
+.header-contact-item {
+  align-items: baseline;
+}
 .header-icon {
   fill: currentColor;
+  margin-right: 10px;
+  vertical-align: middle;
 }
 /*------------------- main --------------*/
 
 .main {
   background: var(--background-accent-color);
-  /* width: 1600px; */
-  /* height: 600px; */
+  height: 600px;
   padding: 200px 0;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
@@ -202,6 +205,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  margin: 0 auto;
 }
 
 .main-title {
@@ -261,8 +265,12 @@ body {
   display: flex;
   gap: 30px;
 }
+
 .benefits-wrap {
-  padding: 25px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
   height: 120px;
   background-color: var(--background-btn);
   margin-bottom: 30px;
@@ -405,18 +413,21 @@ body {
   margin-top: 50px;
 }
 
-.client-item {
+.client-link {
   width: 170px;
   height: 92px;
   color: #afb1b8;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .client-icon {
-  fill: #afb1b8;
+  fill: currentColor;
 }
+
 .client-link:hover .client-icon,
 .client-link:focus .client-icon {
   fill: var(--focus-color);
@@ -424,6 +435,8 @@ body {
 .client-item:hover,
 .client-item:focus {
   border: 1px solid var(--focus-color);
+  fill: var(--focus-color);
+  border-radius: 4px;
 }
 
 /*----------------- .footer -------------*/
@@ -432,6 +445,10 @@ body {
   background: var(--background-accent-color);
   padding-bottom: 60px;
   padding-top: 60px;
+}
+.footer .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer-logo {
@@ -444,10 +461,7 @@ body {
   margin-bottom: 20px;
   display: block;
 }
-.footer-wrap {
-  display: flex;
-  margin: 0 auto;
-}
+
 .footer-item:not(:last-child) {
   margin-bottom: 9px;
 }
@@ -477,10 +491,7 @@ body {
   color: var(--background-focus-color);
 }
 
-.footer-wrap-soc {
-  display: flex;
-  align-content: center;
-  justify-content: center;
+.footer-container-soc {
   margin-left: 70px;
 }
 
@@ -488,11 +499,11 @@ body {
   font-weight: 700;
   line-height: 1.14;
   color: var(--main-text-color);
-  padding-top: 72px;
-  padding-bottom: 20px;
+  margin-top: 72px;
+  margin-bottom: 20px;
 }
 
-.footer-soc-list {
+.footer-soc-item {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -505,7 +516,7 @@ body {
   border-radius: 50%;
   background: rgba(255, 255, 255, 0.1);
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   color: var(--main-text-color);
 }
@@ -530,6 +541,8 @@ body {
 .btn:focus {
   background: var(--background-focus-color);
   color: var(--main-text-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .btn {
   font-family: inherit;
@@ -548,8 +561,6 @@ body {
 .nav-btn {
   background: var(--background-btn);
   letter-spacing: var(--main-letter-spacing);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .portfolio-list {
@@ -559,14 +570,19 @@ body {
 }
 .portfolio-wrap {
   padding: 20px 24px;
-  border: 1px solid #eeeeee;
   border-top: 0;
+  border: 1px solid #eeeeee;
 }
 
-.portfolio-item {
-  width: calc(100%-60px) / 3;
+.portfolio-link {
+  display: block;
 }
 
+.portfolio-link:hover,
+.portfolio-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 .portfolio-title {
   font-weight: 700;
   font-size: 18px;
