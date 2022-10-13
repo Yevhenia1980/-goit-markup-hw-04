@@ -195,6 +195,7 @@ body {
 
 .main {
   background: var(--background-accent-color);
+  max-width: 1600px;
   height: 600px;
   padding: 200px 0;
   background-image: linear-gradient(
@@ -424,19 +425,14 @@ body {
   align-items: center;
 }
 
+.client-link:hover,
+.client-link:focus {
+  border: 1px solid var(--focus-color);
+  color: var(--focus-color);
+  border-radius: 4px;
+}
 .client-icon {
   fill: currentColor;
-}
-
-.client-link:hover .client-icon,
-.client-link:focus .client-icon {
-  fill: var(--focus-color);
-}
-.client-item:hover,
-.client-item:focus {
-  border: 1px solid var(--focus-color);
-  fill: var(--focus-color);
-  border-radius: 4px;
 }
 
 /*----------------- .footer -------------*/
@@ -494,12 +490,15 @@ body {
 .footer-container-soc {
   margin-left: 70px;
 }
+.footer-soc-list {
+  display: flex;
+  gap: 10px;
+}
 
 .footer-top-text {
   font-weight: 700;
   line-height: 1.14;
   color: var(--main-text-color);
-  margin-top: 72px;
   margin-bottom: 20px;
 }
 
@@ -507,7 +506,6 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  gap: 10px;
 }
 
 .footer-soc-link {
